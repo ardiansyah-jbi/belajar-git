@@ -49,7 +49,7 @@
 </div>
 <br>
 <div class="col-sm-12">
-    <button class="btn btn-sm btn-flat btn-primary"><i class="fa fa-plus"></i>Add Matakuliah</button>
+    <button class="btn btn-sm btn-flat btn-primary" data-toggle="modal" data-target="#add"><i class="fa fa-plus"></i>Add Matakuliah</button>
     <button class="btn   btn-sm btn-flat btn-success"><i class="fa fa-print"></i>Cetak KRS</button>
 </div>
 <div class="col-sm-12">
@@ -70,3 +70,65 @@
 
     </table>
 </div>
+
+
+<div class="modal fade" id="add">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Daftar Matakuliah Yang Ditawarkan :</h4>
+            </div>
+            <div class="modal-body">
+
+                <table class="table table-bordered table-striped text-sm" id="example1">
+                    <thead>
+                        <tr class="label-primary">
+                            <td>#</td>
+                            <td>Kode</td>
+                            <td>Matakuliah</td>
+                            <td>SKS</td>
+                            <td>SMT</td>
+                            <td>Kelas</td>
+                            <td>Ruang</td>
+                            <td>Dosen</td>
+                            <td>Quota</td>
+                            <td>Waktu</td>
+                            <td>Action</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php $no = 1;
+                        foreach ($matkul_war as $key => $value) {  ?>
+                            <tr>
+                                <td><?= $no++; ?> </td>
+                                <td><?= $value['kode_matakul']; ?> </td>
+                                <td><?= $value['matkul']; ?> </td>
+                                <td><?= $value['sks']; ?></td>
+                                <td><?= $value['smt']; ?></td>
+                                <td><?= $value['nama_kelas']; ?> </td>
+                                <td><?= $value['ruangan']; ?></td>
+                                <td><?= $value['nama_dosen']; ?> </td>
+                                <td><span class="label label-success">0/<?= $value['quota']; ?></span></td>
+                                <td><?= $value['hari']; ?>,<?= $value['waktu']; ?></td>
+                                <td> <button class="btn btn-flat btn-success btn-sm"><i class="fa fa-plus"></i> </button></td>
+
+
+                            </tr>
+                        <?php  } ?>
+                    </tbody>
+                </table>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default pull-left btn-flat" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-success btn-flat">Simpan</button>
+            </div>
+
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->

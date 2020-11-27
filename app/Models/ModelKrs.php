@@ -19,4 +19,14 @@ class ModelKrs extends Model
             ->where('nim', session()->get('username'))
             ->get()->getRowArray();
     }
+
+    public function matkulwar()
+    {
+        return $this->db->table('tbl_jadwal')
+            ->join('tbl_matakul', 'tbl_matakul.id_matakul = tbl_jadwal.id_matakul', 'left')
+            ->join('tbl_kelas', 'tbl_kelas.id_kelas = tbl_jadwal.id_kelas', 'left')
+            ->join('tbl_ruangan', 'tbl_ruangan.id_ruangan = tbl_jadwal.id_ruangan', 'left')
+            ->join('tbl_dosen', 'tbl_dosen.id_dosen = tbl_jadwal.id_dosen')
+            ->get()->getResultArray();
+    }
 }
