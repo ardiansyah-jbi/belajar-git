@@ -181,9 +181,9 @@
                     <label>Matakuliah</label>
                     <select name="id_matakul" class="form-control">
                         <option value="">--Pilih MATAKULIAH--</option>
-                        <?php foreach ($jadwal_matakul as $key => $value) {  ?>
-                            <option value="<?php echo $value['id_matakul'] ?>"><?php echo $value['smt'] ?>|<?php echo $value['matkul'] ?></option>
-                        <?php   } ?>
+                        <?php foreach ($jadwal_matakul as $key => $value) {   ?>
+                            <option value="<?php echo $value['id_matakul'] ?>"><?php echo $value['smt'] ?> | <?php echo $value['matkul'] ?> </option>
+                        <?php  } ?>
                     </select>
                 </div>
 
@@ -246,7 +246,7 @@
 
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default pull-left btn-flat" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-success btn-flat">Simpan</button>
+                    <button type="submit" name="submit" class="btn btn-success btn-flat">Simpan</button>
                 </div>
                 <?php echo form_close() ?>
             </div>
