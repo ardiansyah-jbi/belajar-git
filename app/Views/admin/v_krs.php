@@ -50,7 +50,7 @@
 <br>
 <div class="col-sm-12">
     <button class="btn btn-sm btn-flat btn-primary" data-toggle="modal" data-target="#add"><i class="fa fa-plus"></i>Add Matakuliah</button>
-    <button class="btn   btn-sm btn-flat btn-success"><i class="fa fa-print"></i>Cetak KRS</button>
+    <a href="<?php echo base_url('krs/print') ?>" target="_blank" class="btn   btn-sm btn-flat btn-success"><i class="fa fa-print"></i>Cetak KRS</a>
 </div>
 <br>
 <div class="col-sm-12">
@@ -82,7 +82,11 @@
         </thead>
         <tbody>
             <?php $no = 1;
-            foreach ($data_krs as $key => $value) {  ?>
+            $sks = 0;
+            foreach ($data_krs as $key => $value) {
+                $sks = $sks + $value['sks'];
+
+            ?>
 
                 <tr>
                     <td><?= $no++; ?></td>
@@ -104,6 +108,7 @@
         </tbody>
 
     </table>
+    <h4>Jumlah SKS : <?php echo $sks; ?></h4>
 </div>
 
 
@@ -144,6 +149,7 @@
                         ?>
 
                             <?php if ($value['id_prodi'] == $krs['id_prodi']) {  ?>
+
 
                                 <tr>
                                     <td><?= $no++; ?> </td>

@@ -101,8 +101,7 @@
                         <tbody>
                             <?php
                             $no = 1;
-                            foreach ($jadwal as $key => $value) { ?>
-
+                            foreach ($jadwal as $key => $value) {  ?>
                                 <tr>
                                     <td> <?= $no++; ?> </td>
                                     <td><?= $value['smt']; ?></td>
@@ -122,6 +121,7 @@
                             <?php  } ?>
                         </tbody>
                     </table>
+
                 </div>
                 <!-- /.box-body -->
             </div>
@@ -182,7 +182,7 @@
                     <select name="id_matakul" class="form-control">
                         <option value="">--Pilih MATAKULIAH--</option>
                         <?php foreach ($jadwal_matakul as $key => $value) {   ?>
-                            <option value="<?php echo $value['id_matakul'] ?>"><?php echo $value['smt'] ?> | <?php echo $value['matkul'] ?> </option>
+                            <option value="<?php echo $value['id_matakul'] ?>"><?php echo $value['smt'] ?> | <?php echo $value['matkul'] ?> | <?php echo $value['semester'] ?> </option>
                         <?php  } ?>
                     </select>
                 </div>
