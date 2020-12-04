@@ -44,14 +44,13 @@
             <!-- info row -->
             <div class="row invoice-info">
                 <div class="col-sm-12 invoice-col">
-
-                    <table class="table-striped table-responsive">
+                    <table class=" table-striped table-responsive">
                         <tr>
-                            <th rowspan="7"><img src="<?= base_url('fotomhs/' . $krs['foto_mhs']) ?>" width="140px"> </th>
+                            <th rowspan="7"><img src="<?= base_url('fotomhs/' . $krs['foto_mhs']) ?>" width="180px"> </th>
                             <th width="150px">Tahun akademik</th>
                             <th width="20px">:</th>
                             <th><?= $ta_dinamis['ta']; ?>/ <?= $ta_dinamis['semester']; ?></th>
-                            <th rowspan="7"></th>
+                            <th rowspan="7"> </th>
 
                         </tr>
                         <tr>
@@ -91,6 +90,8 @@
 
             </div>
             <!-- /.row -->
+
+            <br>
             <div class="row">
 
                 <div class="col-sm-12">

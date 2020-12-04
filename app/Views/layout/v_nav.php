@@ -40,8 +40,8 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Akademik<span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="<?php echo base_url('mhs') ?>">Mahsiswa</a></li>
                             <li><a href="<?php echo base_url('krs') ?>">KRS</a></li>
+                            <li><a href="<?php echo base_url('dasbor_mhs/absensi') ?>">ABSENSI</a></li>
                         </ul>
                     </li>
 

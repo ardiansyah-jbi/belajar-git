@@ -63,7 +63,6 @@ class Filters extends BaseConfig
 
 			'filtermhs' =>	['except' => [
 				'dasbor_mhs', 'dasbor_mhs/*',
-				'mhs', 'mhs/*',
 				'home', 'home/*',
 				'krs', 'krs/*',
 				'/',
