@@ -45,7 +45,19 @@
                         </ul>
                     </li>
 
+
+                <?php  } elseif (session()->get('level') == "3") {   ?>
+                    <li><a href="">Dosen</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Akademik<span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Menu1</a></li>
+                            <li><a href="#">Menu2</a></li>
+                        </ul>
+                    </li>
+
                 <?php  } ?>
+
             </ul>
         </div>
         <!-- /.navbar-collapse -->
